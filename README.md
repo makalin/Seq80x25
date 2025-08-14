@@ -2,6 +2,10 @@
 
 A retro-inspired, terminal-based music sequencer that brings the nostalgic charm of DOS-style interfaces to modern music creation. Built to run in an 80x25 terminal grid, Seq80x25 lets you compose chiptune-style music with a simple, text-based interface.
 
+![Seq80x25 - Retro Music Sequencer](seq80x25.png)
+
+*Compose in Code: Retro Beats in 80x25 Glory!*
+
 ## Features
 
 - **Retro UI**: 80x25 terminal grid with ASCII-based visuals, mimicking classic DOS aesthetics.
@@ -30,6 +34,49 @@ A retro-inspired, terminal-based music sequencer that brings the nostalgic charm
    python seq80x25.py
    ```
 
+## Quick Start
+
+### **Basic Usage**
+```bash
+# Run the main sequencer
+python seq80x25.py
+
+# Or use the launcher scripts
+./launch.sh          # Unix/macOS
+launch.bat           # Windows
+```
+
+### **Tools & Utilities**
+```bash
+# Test all tools
+make tools
+
+# Run demo script
+make demo
+
+# Test individual components
+make patterns        # Pattern library
+make export         # Export tools
+make effects        # Audio effects
+make projects       # Project manager
+make cli            # CLI tool
+```
+
+### **Command Line Interface**
+```bash
+# List available patterns
+python cli_tool.py patterns list
+
+# Show pattern details
+python cli_tool.py patterns show c_major_scale
+
+# Export sequence to WAV
+python cli_tool.py export sequence.json wav
+
+# Create new project
+python cli_tool.py project create "My Project" "A test project"
+```
+
 ## Usage
 
 - Launch the sequencer to enter the 80x25 terminal interface.
@@ -43,6 +90,36 @@ A retro-inspired, terminal-based music sequencer that brings the nostalgic charm
 ## Browser Demo
 
 Run Seq80x25 in your browser using Pyodide! Visit `https://github.com/frangedev/Seq80x25/` (TBD) to try it without installation. Note: Browser mode uses `pygame` with NumPy arrays for sound, avoiding local file access.
+
+## Tools & Utilities
+
+Seq80x25 comes with a comprehensive set of tools for music creation and project management:
+
+### **Pattern Library** (`patterns.py`)
+- **8 built-in musical patterns** (scales, arpeggios, blues, chiptune, etc.)
+- **Custom pattern creation** and saving
+- **Category organization** for easy browsing
+
+### **Export Tools** (`export_tools.py`)
+- **Multiple formats**: JSON, WAV, MIDI, text, CSV
+- **Professional audio generation** with harmonics
+- **Metadata preservation** and version tracking
+
+### **Audio Effects** (`audio_effects.py`)
+- **8 professional effects**: Reverb, Delay, Chorus, Flanger, Distortion, Filter, Compressor, Tremolo
+- **Effect chaining** and presets
+- **Real-time processing** capabilities
+
+### **Project Manager** (`project_manager.py`)
+- **Multi-project organization** with metadata
+- **Sequence management** within projects
+- **Import/export** and backup functionality
+
+### **Command-Line Interface** (`cli_tool.py`)
+- **Full CLI access** to all functionality
+- **Pattern management** commands
+- **Export operations** from terminal
+- **Project management** commands
 
 ## Tech Stack
 
@@ -66,10 +143,20 @@ Please follow the [Code of Conduct](CODE_OF_CONDUCT.md) and report issues via [G
 
 ## Roadmap
 
-- Add support for multiple tracks (e.g., melody, bass, drums).
-- Implement export to MIDI or WAV (desktop only).
-- Enhance ASCII visuals with customizable themes.
-- Add preset patterns for quick chiptune composition.
+### **Completed Features** ✅
+- **Pattern Library**: Built-in musical patterns and custom pattern creation
+- **Export Tools**: Multiple format export (JSON, WAV, MIDI, text, CSV)
+- **Audio Effects**: Professional effects processor with 8 effect types
+- **Project Manager**: Multi-project organization and sequence management
+- **Command-Line Interface**: Full CLI access to all functionality
+
+### **Future Enhancements** 🚀
+- **Multi-track Support**: Melody, bass, drums, and effects tracks
+- **Advanced MIDI Export**: Full MIDI file support with proper timing
+- **Enhanced Visuals**: Customizable themes and advanced ASCII graphics
+- **Real-time Collaboration**: Multi-user sequencing sessions
+- **Plugin System**: Third-party effect and instrument plugins
+- **Cloud Sync**: Project backup and sharing via cloud storage
 
 ## License
 
